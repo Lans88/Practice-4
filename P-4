@@ -1,0 +1,111 @@
+//Task 1: создать кортеж с 3-5 значениями, вывести в консоль 3 способами
+var randomTuple = ("two", 2, 2.0, true)
+var (str, int, double, bool) = randomTuple
+print(int)
+print(randomTuple)
+print(randomTuple.2)
+print(bool)
+//Task 2: создать кортеж с наружениями ПДД с опр параметрами
+var dps1 = (speedLimit: 40, drunk: 5, withoutRights: 7)
+print(dps1.2)
+print(dps1.speedLimit)
+print(dps1)
+
+//Task 3: Создать второй кортеж с другими значениями параметров
+var dps2 = (speedLimit: 34, drunk: 8, withoutRights: 23)
+var resultdps = (speedLimit: dps2.speedLimit - dps1.speedLimit, drunk: dps2.drunk - dps1.drunk, wuthoutRights: dps2.withoutRights - dps1.withoutRights)
+print(resultdps)
+print(resultdps.2)
+print(resultdps.speedLimit)
+
+//продвинутый уровень
+//Task 1: создать 10 кортежей разрабов с параметрами
+var dev1 = (name: "Artem", age: 33, exp: 0.5, profession: "ios")
+var dev2 = (name: "Anton", age: 30, exp: 0.1, profession: "android")
+var dev3 = (name: "Ivan", age: 24, exp: 3.0, profession: "")
+var dev4 = (name: "Alex", age: 45, exp: 6.0, profession: "")
+var dev5 = (name: "Oleg", age: 0, exp: 0, profession: "")
+var dev6 = (name: "Serega", age: 0, exp: 0, profession: "")
+var dev7 = (name: "Jenya", age: 0, exp: 0, profession: "")
+var dev8 = (name: "Max", age: 0, exp: 0, profession: "")
+var dev9 = (name: "Andrey", age: 0, exp: 0, profession: "")
+var dev10 = (name: "Tom", age: 0, exp: 0, profession: "")
+if dev1.age > 23 && dev1.exp > 0 && dev1.profession == "ios" {
+    print ("Принят на работу.")
+} else {
+    print ("Извините, Вы нам не подходите")
+}
+if dev2.age > 23 && dev2.exp > 0 && dev2.profession == "ios" {
+    print ("Принят на работу.")
+} else {
+    print ("Извините, Вы нам не подходите")
+}
+if dev3.age > 23 && dev3.exp > 0 && dev3.profession == "ios" {
+    print ("Принят на работу.")
+} else {
+    print ("Извините, Вы нам не подходите")
+}
+if dev4.age > 23 && dev4.exp > 0 && dev4.profession == "ios" {
+    print ("Принят на работу.")
+} else {
+    print ("Извините, Вы нам не подходите")
+}
+if dev5.age > 23 && dev5.exp > 0 && dev5.profession == "ios" {
+    print ("Принят на работу.")
+} else {
+    print ("Извините, Вы нам не подходите")
+}
+if dev6.age > 23 && dev6.exp > 0 && dev6.profession == "ios" {
+    print ("Принят на работу.")
+} else {
+    print ("Извините, Вы нам не подходите")
+}
+if dev7.age > 23 && dev7.exp > 0 && dev7.profession == "ios" {
+    print ("Принят на работу.")
+} else {
+    print ("Извините, Вы нам не подходите")
+}
+if dev8.age > 23 && dev8.exp > 0 && dev8.profession == "ios" {
+    print ("Принят на работу.")
+} else {
+    print ("Извините, Вы нам не подходите")
+}
+if dev9.age > 23 && dev9.exp > 0 && dev9.profession == "ios" {
+    print ("Принят на работу.")
+} else {
+    print ("Извините, Вы нам не подходите")
+}
+if dev10.age > 23 && dev10.exp > 0 && dev10.profession == "ios" {
+    print ("Принят на работу.")
+} else {
+    print ("Извините, Вы нам не подходите")
+}
+//Более утонченный способ решения задачи
+func huntedOnWork (dev: (name: String, age: Int, exp: Double, profession: String)) {
+    if dev.age > 23 && dev.exp > 0 && dev.profession == "ios" {
+        print("Принят на работу.")
+    } else {
+        print("Вы нам не подходите.")
+    }
+}
+huntedOnWork(dev: ("Artem", 33, 1.0, "ios"))
+
+var developersArray: [(name: String, age: Int, exp: Double, profession: String)] = []
+func jundebvelopers (dev: (name: String, age: Int, exp: Double, profession: String)) {
+    if dev.age < 23 {
+        developersArray.append(dev)
+    } else {
+        print("Разработчик не подходит по условиям.")
+    }
+}
+jundebvelopers(dev: ("Artem", 33, 1.0, "ios"))
+jundebvelopers(dev: (name: "Anton", age: 30, exp: 0.1, profession: "android"))
+jundebvelopers(dev: (name: "Ivan", age: 24, exp: 3.0, profession: ""))
+jundebvelopers(dev: (name: "Alex", age: 45, exp: 6.0, profession: ""))
+jundebvelopers(dev: (name: "Oleg", age: 0, exp: 0, profession: ""))
+jundebvelopers(dev: (name: "Serega", age: 0, exp: 0, profession: ""))
+jundebvelopers(dev: (name: "Jenya", age: 0, exp: 0, profession: ""))
+jundebvelopers(dev: (name: "Max", age: 0, exp: 0, profession: ""))
+jundebvelopers(dev: (name: "Andrey", age: 0, exp: 0, profession: ""))
+jundebvelopers(dev: (name: "Tom", age: 0, exp: 0, profession: ""))
+print(developersArray)
